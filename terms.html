@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - SetuAI</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/icons/logo.png">
+    <link rel="apple-touch-icon" href="/icons/logo.png">
+
     <style>
         * {
             margin: 0;
@@ -12,13 +17,24 @@
         }
 
         :root {
-            --primary-color: #e60023;
-            --primary-dark: #c70020;
+            /* Logo Colors */
+            --logo-navy: #1e3a5f;
+            --logo-cyan: #00b4d8;
+            --pinterest-red: #e60023;
+            --pinterest-dark: #c70020;
+
+            /* Semantic Colors */
+            --primary-color: var(--logo-navy);
+            --primary-dark: #152a45;
+            --accent-color: var(--logo-cyan);
+            --cta-color: var(--pinterest-red);
+
+            /* UI Colors */
             --bg-primary: #ffffff;
-            --bg-secondary: #f9fafb;
-            --text-primary: #111827;
-            --text-secondary: #6b7280;
-            --border-color: #e5e7eb;
+            --bg-secondary: #f8fafc;
+            --text-primary: #1a2332;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
         }
 
         body {
@@ -51,10 +67,19 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
+            display: flex;
+            align-items: center;
             text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
         }
 
         nav a {
@@ -172,7 +197,9 @@
 <body>
     <header>
         <div class="header-content">
-            <a href="/" class="logo">SetuAI</a>
+            <a href="/" class="logo">
+                <img src="/logo.png" alt="SetuAI Logo">
+            </a>
             <nav>
                 <a href="/privacy.html">Privacy Policy</a>
                 <a href="https://setuai.io">Home</a>
